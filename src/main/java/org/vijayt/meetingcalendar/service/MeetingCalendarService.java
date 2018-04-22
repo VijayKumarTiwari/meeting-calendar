@@ -20,7 +20,6 @@ public class MeetingCalendarService {
     private final String DATE_TIME_FORMAT = "yyyy-MM-dd HH:mm:ss";
     private final DateTimeFormatter dateFormatter = DateTimeFormatter.ofPattern(DATE_FORMAT);
     private final DateTimeFormatter timeFormatter = DateTimeFormatter.ofPattern(TIME_FORMAT);
-    private final DateTimeFormatter dateTimeFormatter = DateTimeFormatter.ofPattern(DATE_TIME_FORMAT);
 
     public boolean save(Meeting meeting) {
         if (isMeetingWithinOfficeHours(meeting) && isMeetingTimeAvailable(meeting)) {
